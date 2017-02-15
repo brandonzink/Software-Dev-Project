@@ -13,16 +13,16 @@ INSERT TITLE HERE
 Desription:  
 A website used to share links, ideas, connect people, and facilitate growth driven conversation in an online enviroment. If you're familiar with Reddit and Facebook, a mashed together version of the two in sorts.  
   
-Vision Statement:
+Vision Statement:  
 "Facilitate conversation, share knowledge, and connect like minded people."
 
-Motivation:
+Motivation:  
 Our motivation for this project is in part to learn how a website is created and its interaction with databases and content storage. We are also interested in taking a simple yet popular idea that was put forth by Reddit in having all content come from the user, while also connecting the users to one another is a more personal relationship, and finding ways to make it our own. 
 
-Risks:
+Risks:  
 Many of us are new to the website creation, although we are all at least familiar with HTML and SQL. 
 
-Mitigation Strategy:
+Mitigation Strategy:  
 Cam has built a website before and will be a valuable resource to us as we all work on our contributions. There are also countless online resources that we can and will use to familiarize ourselves with website creation. 
   
 User Stories:  
@@ -36,7 +36,7 @@ User Stories:
 Methodology:  
 Agile, though some of this will take place via texting as we talk about what we have finished.  
 
-Project Tracking Software:
+Project Tracking Software:  
 https://trello.com/b/6OhVgUQH/project-plan
 
 
