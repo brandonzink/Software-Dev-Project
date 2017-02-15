@@ -1,6 +1,6 @@
 # Software-Dev-Project
 
-Team members:  
+Team Members:  
 Brandon Zink; brandonzink  
 Cameron Connor; Cammyc  
 Abiel Fattore; abfa4082  
