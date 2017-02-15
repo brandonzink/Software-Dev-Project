@@ -31,7 +31,8 @@ User Stories:
 003: As a lonely individual, I want a way to find people that share similar interests and get to know them individually.  
 004: As a knowledge seeking individual, I want an easy way to view lots of things that people find interesting to learn.  
 005: As a general user, I want an easy way to view specifically what I am looking for to make using the site streamlined.  
-006: As a submitter, I want simple to understand guidlines for submitting so that I don't goout of bounds.
+006: As a submitter, I want simple to understand guidlines for submitting so that I don't go out of bounds.
+006: As a Facebook user I like that I get to know my friends through their profile, but theres not much discussion between me and my friends beyond short comments. As a reddit user, theres great discussion, but I don't get to know the people I'm talking to. I want a social media that encourages the type of meaningful discussion seen on Reddit combined with the relationships and personality found on Facebook.
   
 Methodology:  
 Agile, though some of this will take place via texting as we talk about what we have finished.  
