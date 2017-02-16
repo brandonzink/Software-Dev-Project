@@ -8,7 +8,7 @@ Phillip Kickbush; Philopalope
 Channing Hurley; channinghurley  
   
 Title:  
-INSERT TITLE HERE  
+FaceIt (Work in progress, subject to change)  
   
 Desription:  
 A website used to share links, ideas, connect people, and facilitate growth driven conversation in an online enviroment. If you're familiar with Reddit and Facebook, a mashed together version of the two in sorts.  
