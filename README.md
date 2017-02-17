@@ -40,4 +40,7 @@ Agile, though some of this will take place via texting as we talk about what we 
 Project Tracking Software:  
 https://trello.com/b/6OhVgUQH/project-plan
 
+![alt tag](https://raw.githubusercontent.com/brandonzink/Software-Dev-Project/master/Screen%20Shot%202017-02-16%20at%205.30.05%20PM.png)
+
+
 
