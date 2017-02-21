@@ -47,7 +47,7 @@ function validateForm()
     var b=document.forms["loginForm"]["password"].value;
     if(a==null || a=="",b==null || b=="")
     {
-    	alert("Please fill all reuired fields");
+    	alert("Please fill all required fields");
     	return false;
     }
 }

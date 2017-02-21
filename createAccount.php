@@ -37,7 +37,7 @@
 
 	<!-- Headers and instructions -->
 
-	<form method="post" id="createAccount" name="createAccount" action="scriptsPHP/accountCreation.php">
+	<form method="post" id="createAccount" name="createAccount" action="scriptsPHP/createAccountForm">
 
 	<!-- Sends information to createAccount.php -->
 
@@ -68,7 +68,7 @@ function validateForm()
     var c=document.forms["createAccount"]["email"].value;
     if(a==null || a=="",b==null || b=="", c==null || c=="")
     {
-    	alert("Please fill all reuired fields");
+    	alert("Please fill all required fields");
     	return false;
     }
 }
