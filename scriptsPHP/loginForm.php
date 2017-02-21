@@ -1,8 +1,18 @@
 <?php
 
-$userName = $_POST["username"];
-$password = $_POST["password"];
+include_once("databasehelper.php");
 
-echo $userName." - ".$password;
+$username = (empty($_POST["username"])) ? "" : $_POST["username"];
+$password = (empty($_POST["password"])) ? "" : $_POST["password"];
+
+$mysqli = getDB();
+
+$result = loginCheck($mysqli, $username, $password);
+
+if($result){
+	echo "login successful";
+}else{
+	echo "invalid username or password";
+}
 
 ?>
