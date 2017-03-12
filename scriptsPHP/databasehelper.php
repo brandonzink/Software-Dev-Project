@@ -2,7 +2,7 @@
 
 
 function getDB(){//replace all other uses so that when site goes live I only have to change this function from root,root
-  return new mysqli("localhost", "root", "root", "faceit");
+  return new mysqli("localhost", "root", "", "faceit");
 }
 
 function loginCheck($mysqli, $username, $password){

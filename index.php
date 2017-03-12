@@ -4,7 +4,7 @@
 	<title>FaceIt Login</title>
 <style>
 body{
-	background-color: White;
+	background-color: gainsboro;
 }
 </style>
 </head>
@@ -12,7 +12,7 @@ body{
 <header>
 	
   <CENTER>
-  <img src="http://i.imgur.com/NlLgS1e.png" id="sslogo"/>
+  <img src="Images/faceit_mainlogo_grey.png" id="sslogo"/>
   <!-- Site logo -->
   <form method="post" id="loginForm" name="loginForm" action="scriptsPHP/loginForm.php">
   <!-- Sends info to loginForm.php -->

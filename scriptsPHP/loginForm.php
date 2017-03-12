@@ -12,7 +12,7 @@ $result = loginCheck($mysqli, $username, $password);
 if($result){
 	echo "login successful";
 }else{
-	echo "invalid username or password";
+	echo "invalid username or password <br>";
 }
 
 ?>
