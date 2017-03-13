@@ -36,6 +36,25 @@ function loginCheck($mysqli, $username, $password){
     }
 }
 
+function createAccount($mysqli, $username, $password, $email){
+	// Check if username is a duplicate
+	$usernameCheck=mysql_query("SELECT * FROM users (username, password, email) WHERE username=$username");
+	if(mysqul_num_row($usernameCheck)>=1){
+		echo"That username is already being used.";
+	}
+
+	// Check if email is a duplicate
+	$emailCheck=mysql_query("SELECT * FROM users (username, password, email) WHERE email=$email");
+	else if(mysqul_num_row($emailCheck)>=1){
+		echo"That email is already being used for a different account.";
+	}
+
+	else{
+		$sql = "INSERT INTO users (username, password, email)
+		VALUES ($username, $password, $email)";
+	}
+}
+
 
 
 

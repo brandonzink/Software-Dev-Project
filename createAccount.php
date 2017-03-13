@@ -37,7 +37,7 @@
 
 	<!-- Headers and instructions -->
 
-	<form method="post" id="createAccount" name="createAccount" action="scriptsPHP/createAccountForm">
+	<form method="post" id="createAccount" name="createAccount" action="scriptsPHP/createAccountForm.php">
 
 	<!-- Sends information to createAccount.php -->
 
