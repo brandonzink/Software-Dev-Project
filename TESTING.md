@@ -1,3 +1,16 @@
+WHO  
+Brandon Zink, Cam Connor, Abiel Fatorre, Philip Kickbush, Channing Hurley  
+  
+TITLE  
+FaceIt  
+  
+VISION  
+"Facilitate conversation, share knowledge, and connect like minded people."  
+  
+AUTOMATED TESTS
+
+
+
 USER ACCEPTANCE TEST PLANS  
   
 User case name  
@@ -51,24 +64,23 @@ Post-conditions
       
       
 User case name  
-    Verify login with valid user name and password  
-Description
-    Test the Google login page
-Pre-conditions
-    User has valid user name and password
-Test steps
-    1. Navigate to login page
-    2. Provide valid user name
-    3. Provide valid password
-    4. Click login button
-Expected result
-    User should be able to login
-Actual result
-    User is navigated to dashboard with successful login
-Status (Pass/Fail)
-    Pass
-Notes
-    N/A
-Post-conditions
-    User is validated with database and successfully signed into their account.
-    The account session details are logged in database.
+   Change profile page  
+Description  
+    Change content on user profile page, have it show up on actualy user profile page 
+Pre-conditions  
+    User has profile and is logged in  
+Test steps  
+    1. Navigate to profile page  
+    2. Click on edit profile page button  
+    3. Change some piece of information   
+    4. Return to profile page  
+Expected result  
+    Changed information should show up  
+Actual result  
+    Changed information shows up, but is only sometimes stored in database 
+Status (Pass/Fail)  
+    Pass and Fail  
+Notes  
+    Currently a bug we are working on, should be fixed shortly  
+Post-conditions  
+    Changed profile information should show up to all viewing page  
