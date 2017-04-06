@@ -12,7 +12,7 @@ AUTOMATED TESTS
 Link to tool used to automate testing:
 https://www.browserstack.com/
 
-BrowserStack is one of the few website testing services that allows you to test your website locally without a publicly accessible url, making this tool suitable for our needs. We used BrowserStack to run test on our website accross three different web browsers: Internet Explorer, Safari, and Google Chrome. BrowserStack provides you with a preview of how your site will run on these browsers. The following link contains screenshots of the output of our tests on the various web browsers as the test navigates through the currently functional pages of our website.
+BrowserStack is one of the few website testing services that allows you to test your website locally without a publicly accessible url, making this tool suitable for our needs. We used BrowserStack to run tests on our website accross three different web browsers: Internet Explorer, Safari, and Google Chrome. BrowserStack provides you with a preview of how your site will run on these browsers. The following link contains screenshots of the output of our tests on the various web browsers as the test navigates through the currently functional pages of our website.
 
 Pictures stored in folder on google drive with link below.  
 https://drive.google.com/drive/folders/0BzgPuxm_thkoazFRU1hfLWlWWlk?usp=sharing  
