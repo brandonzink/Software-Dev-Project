@@ -7,10 +7,11 @@ FaceIt
 VISION  
 "Facilitate conversation, share knowledge, and connect like minded people."  
   
-AUTOMATED TESTS
-
-
-
+AUTOMATED TESTS  
+Pictures stored in folder on google drive with link below.  
+https://drive.google.com/drive/folders/0BzgPuxm_thkoazFRU1hfLWlWWlk?usp=sharing  
+  
+  
 USER ACCEPTANCE TEST PLANS  
   
 User case name  
