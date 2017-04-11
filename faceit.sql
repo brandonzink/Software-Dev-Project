@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2017 at 12:03 AM
+-- Generation Time: Feb 21, 2017 at 01:12 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -72,7 +72,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `Email` varchar(767) NOT NULL,
   `Description` text NOT NULL,
   `ProfilePicURL` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`ID`, `Username`, `Password`, `Email`, `Description`, `ProfilePicURL`) VALUES
+(1, 'johndoe', '$2y$10$K42JtqamRmIMvyny4OW9jOaNg0Os0lOuKSAh.cYdb3Ntsg8v5QRl6', 'john.doe@gmail.com', 'I am not a real person in case you were wondering. I am Brandon''s imaginary friend.', '');
 
 --
 -- Indexes for dumped tables
@@ -125,7 +132,7 @@ MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -4,15 +4,14 @@ include_once("databasehelper.php");
 
 $username = (empty($_POST["username"])) ? "" : $_POST["username"];
 $password = (empty($_POST["password"])) ? "" : $_POST["password"];
+$email = (empty($_POST["email"])) ? "" : $_POST["email"];
 
 $mysqli = getDB();
 
-$result = loginCheck($mysqli, $username, $password);
+$result = createAccount($mysqli, $username, $password);
 
 if($result){
-	echo "login successful";
-}else{
-	echo "invalid username or password <br>";
+	echo "Account created successfully";
 }
 
 ?>
