@@ -29,7 +29,7 @@ function loginCheck($mysqli, $username, $password){
 
 	if(password_verify($password, $passwordHash)){
 
-		return true;
+		return $ID;
 
     }else{
     	return false;
@@ -94,6 +94,17 @@ function editProfilePage($mysqli, $firstname, $lastname, $username, $description
 
 
 //$sql = "INSERT INTO users (username, password, email) VALUES ($username, $password, $email)";
+	$emailCheck= "UPDATE users SET FirstName = ?, LastName = ?, Profession = ?, Description = ?";
+		$statement = $mysqli->prepare($emailCheck);
+		$statement->bind_param("ssss", $firstname, $lastname, $profession, $description);
+		$statement->execute();
+
+
+	if($statement){
+		echo "update succesful";
+	}else{
+		echo "fuck";
+	}
 
 
 	
