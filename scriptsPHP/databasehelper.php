@@ -37,24 +37,67 @@ function loginCheck($mysqli, $username, $password){
 }
 
 function createAccount($mysqli, $username, $password, $email){
+	// // Check if username is a duplicate
+	// $usernameCheck=mysql_query("SELECT * FROM users (username, password, email) WHERE username=$username");
+	// if(mysqul_num_row($usernameCheck)>=1){
+	// 	echo"That username is already being used.";
+	// }
+
+	// // Check if email is a duplicate
+	// $emailCheck=mysql_query("SELECT * FROM users (username, password, email) WHERE email=$email");
+	// else if(mysqul_num_row($emailCheck)>=1){
+	// 	echo "That email is already being used for a different account.";
+	// }
+
+	// else{
+	// 	$sql = "INSERT INTO users (username, password, email)
+	// 	VALUES ($username, $password, $email)";
+	// }
+
 	// Check if username is a duplicate
-	$usernameCheck=mysql_query("SELECT * FROM users (username, password, email) WHERE username=$username");
-	if(mysqul_num_row($usernameCheck)>=1){
+	$usernameCheck = 'SELECT * FROM Users WHERE username = ?';
+
+	$statement = $mysqli->prepare($usernameCheck);
+	$statement->bind_param("s", $username);
+	$statement->execute();
+	$statement->fetch();
+
+	$row_count = $statement->num_rows;
+	$statement->close();
+
+
+	if($row_count > 0){
 		echo"That username is already being used.";
+	}else{
+		// Check if email is a duplicate
+		$emailCheck= "SELECT * FROM users WHERE email = ?";
+		$statement = $mysqli->prepare($emailCheck);
+		$statement->bind_param("s", $email);
+		$statement->execute();
+		$statement->fetch();
+
+		$row_count = $statement->num_rows;
+		$statement->close();
+
+		if($row_count > 0){
+			echo "That email is already being used for a different account.";
+		}else{
+			$sql = "INSERT INTO users (username, password, email) VALUES ($username, $password, $email)";
+			echo "We bouta create this account!!!!";
+		}
 	}
 
-	// Check if email is a duplicate
-	$emailCheck=mysql_query("SELECT * FROM users (username, password, email) WHERE email=$email");
-	else if(mysqul_num_row($emailCheck)>=1){
-		echo"That email is already being used for a different account.";
-	}
-
-	else{
-		$sql = "INSERT INTO users (username, password, email)
-		VALUES ($username, $password, $email)";
-	}
 }
 
+function editProfilePage($mysqli, $firstname, $lastname, $username, $description){
+
+
+
+//$sql = "INSERT INTO users (username, password, email) VALUES ($username, $password, $email)";
+
+
+	
+}
 
 
 

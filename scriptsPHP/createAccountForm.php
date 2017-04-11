@@ -8,7 +8,7 @@ $email = (empty($_POST["email"])) ? "" : $_POST["email"];
 
 $mysqli = getDB();
 
-$result = createAccount($mysqli, $username, $password);
+$result = createAccount($mysqli, $username, $password, $email);
 
 if($result){
 	echo "Account created successfully";
