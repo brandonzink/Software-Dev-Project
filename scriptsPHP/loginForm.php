@@ -10,7 +10,8 @@ $mysqli = getDB();
 
 $result = loginCheck($mysqli, $username, $password);
 
-if($result){
+if($result != false){
+	setcookie("userID", $result, false, '/');
 	echo "login successful";
 	//$link_address2 = 'profilePage.php';
 	//echo "<a href='$link_address1'>Profile Page</a>";
