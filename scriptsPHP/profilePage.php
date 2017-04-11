@@ -13,7 +13,11 @@ include_once("loginForm.php");
 
 echo "Username<br>";
 echo "johndoe<br>";
+<<<<<<< HEAD
 dickbag
+=======
+
+>>>>>>> master
 echo "First Name<br>";
 echo "John<br>";
 
