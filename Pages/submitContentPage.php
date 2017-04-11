@@ -53,7 +53,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-black">Submit Content</h2>
     <hr style="width:200px" class="w3-text-black">
-    <p>Change this to the text boxes for submitting content.
+    <p>
+      <!--
+      <form method="post" id="submitContent" name="submitContent" action="">
+      -->
+
+      <!-- Create fields for a submission -->
+      <p2>Title:</p2><br>
+      <input style="width:400px" type="text" placeholder="Title" name="title"><br>
+      
+      <p2>Content:</p2><br>
+      <textarea name="content" placeholder="Post Content" rows="10" cols="75">
+      </textarea>
     </p>
     
 </div>
