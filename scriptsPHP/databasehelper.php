@@ -89,6 +89,15 @@ function createAccount($mysqli, $username, $password, $email){
 
 }
 
+function editProfilePage($mysqli, $firstname, $lastname, $username, $description){
+
+
+
+//$sql = "INSERT INTO users (username, password, email) VALUES ($username, $password, $email)";
+
+
+	
+}
 
 
 
