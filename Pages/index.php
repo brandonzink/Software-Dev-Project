@@ -1,3 +1,9 @@
+<?php
+if(isset($_COOKIE["userID"])){
+  header('Location: profilePage.php');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +20,7 @@ body{
   <CENTER>
   <img src="Images/faceit_mainlogo_grey.png" id="sslogo"/>
   <!-- Site logo -->
-  <form method="post" id="loginForm" name="loginForm" action="scriptsPHP/loginForm.php">
+  <form method="post" id="loginForm" name="loginForm" action="../scriptsPHP/loginForm.php">
   <!-- Sends info to loginForm.php -->
   		Username:<br>
   		<!-- Max 20 characters -->

@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-		body{
-			background-color: gainsboro;
-		}
+    body{
+      background-color: gainsboro;
+    }
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
@@ -53,7 +53,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-black">Profile</h2>
     <hr style="width:200px" class="w3-text-black">
-    <p>Change this to where all the profile information goes.
+    <p>
+      <form method="post" action="../scriptsPHP/updateProfileForm.php">
+      First Name:<br>
+      <input type="text" name="firstname"><br>
+      Last Name:<br>
+      <input type="text" name="lastname"><br>
+      Profession :<br>
+      <input type="text" name="profession"><br>
+      Description:<br>
+      <input type="text" name="description"><br>
+      <input type="submit">
+      </form>
     </p>
     
 </div>
