@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Profile Page</title>
+<title>Edit Profile Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -11,30 +11,19 @@
       background-color: gainsboro;
     }
 
-    name{
-    	color: #1a1a1a;
-		font-size: 30px;
-		font-weight: bold;
-    }
-
-    .profile_pic{
-    	height: 300px;
-    	width: auto;
-    }
-
     .button{
-		background-color: gainsboro; 
-	    border: none;
-	    color: black;
-	    padding: 2px 4px;
-	    text-align: center;
-	    text-decoration: none;
-	    display: inline-block;
-	    vertical-align: middle;
-	    font-size: 12px;
-	    border: 2px solid grey;
-	    border-radius: 4px;
-	}
+      background-color: gainsboro; 
+      border: none;
+      color: black;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 16px;
+      border: 2px solid grey;
+      border-radius: 4px;
+    }
 
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -75,26 +64,40 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>Facilitate conversation, share knowledge, and connect like minded people.</p>
   </header>
 
-<!-- This is where the user profile goes --> <br>
-<!-- user name, edit profile button -->
-<name>Cam Connor</name>
-<form action="editProfilePage.php">
-		<input type="submit" class="button" value="Edit"></input>
-		<!-- Sends to create account page -->
-</form><br>
-
-<!-- profile picture -->
-<img src="Images/cammyfatty.jpg" id="profilepic" class="profile_pic" /><br>
-
-<!-- Email, work, about -->
-<h3>Email</h3>
-<p>Isuckcock@hotmail.com</p><br>
-
-<h3>Work</h3>
-<p>School of the mentally fucking retarted</p><br>
-
-<h3>About</h3>
-<p>I like to jump on dudes cocks for a living, it really gets me going and I really like to excitement from getting a giant cock in that ass.</p>
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-black">Edit Profile</h2>
+    <hr style="width:200px" class="w3-text-black">
+    <p>
+      <form method="post" action="../scriptsPHP/updateProfileForm.php">
+      First Name:<br>
+        <input type="text" name="firstname"><br>
+      Last Name:<br>
+        <input type="text" name="lastname"><br>
+      Profession :<br>
+        <input type="text" name="profession" style="width:400px;"><br>
+      Description/About:<br>
+        <textarea onkeyup="textCounter(this, 'counter', 1000);" name="description" style="width:400px;height:200px;"></textarea><br>
+        <h10>1,000 character max</h10><br>
+        
+        <br><input type="submit" class="button">
+      </form>
+    </p>
+    
+</div>
 
 </body>
 </html>
+
+<!-- counts the number of characters on input box, deletes extra is you go over -->
+<script>
+  function textCounter(field,field2,maxlimit){
+   var countfield = document.getElementById(field2);
+   if ( field.value.length > maxlimit ) {
+    field.value = field.value.substring( 0, maxlimit );
+    return false;
+   } else {
+    countfield.value = maxlimit - field.value.length;
+   }
+  }
+</script>
