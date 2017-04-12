@@ -6,7 +6,9 @@
 	<style type="text/css">
 	/*Setting up styling for page*/
 		body{
-			background-color: gainsboro;
+			/*used on sides of screens*/
+			background-image: url(Images/forest.jpg);
+			background-repeat: no-repeat;
 		}
 		h3{
 			font-family: Arial;
@@ -60,6 +62,23 @@
 		    border: 2px solid grey;
 		    border-radius: 4px;
 		}
+		/*gray part in middle of screen with slight gradient*/
+		div{
+			width: 1000px;
+			height: auto;
+			background: linear-gradient(to bottom right, gainsboro, gray);
+
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -1;
+
+			margin: auto;
+
+			border-radius: 150px;
+		}
 
 	</style>
 </head>
@@ -89,6 +108,7 @@
   		<br><input type="Submit" class="button" value="Create Account" onclick="return validateForm()" /></input> 
   		<!-- Runs validateForm() to check if fields are empty -->
 	</form>
+	<div></div>
 	</CENTER>
 </body>
 </html>
