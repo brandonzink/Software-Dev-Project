@@ -6,6 +6,7 @@
 	<style type="text/css">
 	/*Setting up styling for page*/
 		body{
+			/*used on sides of screens*/
 			background-image: url(Images/forest.jpg);
 			background-repeat: no-repeat;
 		}
@@ -61,7 +62,7 @@
 		    border: 2px solid grey;
 		    border-radius: 4px;
 		}
-
+		/*gray part in middle of screen with slight gradient*/
 		div{
 			width: 1000px;
 			height: auto;
@@ -75,6 +76,8 @@
 			z-index: -1;
 
 			margin: auto;
+
+			border-radius: 150px;
 		}
 
 	</style>

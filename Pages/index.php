@@ -40,6 +40,8 @@ div{
 	z-index: -1;
 
 	margin: auto;
+
+	border-radius: 150px;
 }
 
 .button{
