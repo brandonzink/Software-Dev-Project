@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>FaceIt Home</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -51,9 +51,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-black">Recent Posts</h2>
+    <h2 class="w3-text-black">Submit Content</h2>
     <hr style="width:200px" class="w3-text-black">
-    <p>This is where all of the posts will go.
+    <p>Change this to the text boxes for submitting content.
     </p>
     
 </div>
