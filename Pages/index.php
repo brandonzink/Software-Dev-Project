@@ -10,8 +10,9 @@ if(isset($_COOKIE["userID"])){
 	<title>FaceIt Login</title>
 <style>
 body{
-	background-image: url(Images/forest.jpg);
+	background-image: url(Images/background.gif);
 	background-repeat: no-repeat;
+	background-size: 100%;
 }
 input[type="text"] {
   padding: 10px;
@@ -41,7 +42,7 @@ div{
 
 	margin: auto;
 
-	border-radius: 150px;
+	border-radius: 100px;
 }
 
 .button{
