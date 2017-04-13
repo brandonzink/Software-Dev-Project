@@ -28,7 +28,7 @@ input[type="password"] {
   border-radius: 4px;
 }
 
-div{
+.mainbox{
 	width: 1000px;
 	height: auto;
 	background: linear-gradient(to bottom right, gainsboro, gray);
@@ -58,12 +58,38 @@ div{
     border-radius: 4px;
 }
 
+/*This potentialy allows for a fade in picture at page load if needed*/
+/*.elementToFadeInAndOut {
+    width: 100%;
+    height: 100%;
+    background-image: url(Images/spin_box_faceit.gif);
+    background-size: cover;
+    -webkit-animation: fadeinout 5s linear forwards;
+    animation: fadeinout 5s linear forwards;
+    position: absolute;
+    top:-100px;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}*/
+
 </style>
 </head>
 <body>
 <header>
 
   <CENTER>
+  <!-- Part of fade in image on page load -->
+  <!-- <div class=elementToFadeInAndOut></div> -->
+
+  
   <img src="Images/faceit_mainlogo_noback.png" id="sslogo"/>
   <!-- Site logo -->
   <form method="post" id="loginForm" name="loginForm" action="../scriptsPHP/loginForm.php">
@@ -84,7 +110,7 @@ div{
 		<input type="Submit" class="button" value="Create Account"></input>
 		<!-- Sends to create account page -->
 	</form>
-	<div></div>
+	<div class=mainbox></div>
     </CENTER>
 
 </header> 
