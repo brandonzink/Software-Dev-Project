@@ -75,9 +75,22 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       Last Name:<br>
         <input type="text" name="lastname"><br>
       Profession :<br>
-        <input type="text" name="profession" style="width:400px;"><br>
+        <select name="profession">
+          <option> - </option>
+          <option>Accountant</option>
+          <option>Bus Driver</option>
+          <option>Engineer</option>
+          <option>Brandons Servant</option>
+          <option>Mechanic</option>
+          <option>Doctor</option>
+          <option>Professor</option>
+          <option>Daycare</option>
+          <option>Age of Empires Gamer</option>
+          <option>Writer</option>
+        </select><br>
+        <!-- <input type="text" name="profession" style="width:400px;"><br> -->
       Description/About:<br>
-        <textarea onkeyup="textCounter(this, 'counter', 1000);" name="description" style="width:400px;height:200px;"></textarea><br>
+        <textarea spellcheck="true" onkeyup="textCounter(this, 'counter', 1000);" name="description" style="width:400px;height:200px;"></textarea><br>
         <h10>1,000 character max</h10><br>
         
         <br><input type="submit" class="button">
