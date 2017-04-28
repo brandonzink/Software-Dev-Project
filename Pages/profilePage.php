@@ -82,6 +82,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>Facilitate conversation, share knowledge, and connect like minded people.</p>
   </header>
 
+  <div style="position: fixed; top: 93%; left: 92%;">
+      <p>FaceIt © 2017</p>
+  </div>
+
 <!-- This is where the user profile goes --> <br>
 <!-- user name, edit profile button -->
 <name>Cam Connor</name>

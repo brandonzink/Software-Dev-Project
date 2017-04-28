@@ -73,7 +73,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p2>Content:</p2><br>
       <textarea name="content" placeholder="Post Content" rows="10" cols="75"></textarea>
     </p>
-    
+   
+  </div>
+
+  <div style="position: fixed; top: 93%; left: 92%;">
+      <p>FaceIt © 2017</p>
+  </div>
+
 </div>
 
 </body>
