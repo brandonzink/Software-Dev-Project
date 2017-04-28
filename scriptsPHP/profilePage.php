@@ -5,6 +5,9 @@
 <h1>Profile Page</h1>
 </head>
 
+<body>
+
+
 
 
 <?php
@@ -34,6 +37,6 @@ include_once("databasehelper.php");
   </fieldset>
 </form>
 
-
+</body>
 
 </html>

@@ -6,7 +6,9 @@
 	<style type="text/css">
 	/*Setting up styling for page*/
 		body{
-			background-color: gainsboro;
+			/*used on sides of screens*/
+			background-image: url(Images/forest.jpg);
+			background-repeat: no-repeat;
 		}
 		h3{
 			font-family: Arial;
@@ -25,6 +27,57 @@
 
 		p2{
 			font-family: Arial;
+		}
+
+		input[type="text"] {
+		  padding: 10px;
+		  border: solid 3px grey;
+		  transition: border 0.3s;
+		  border-radius: 4px;
+		}
+
+		input[type="password"] {
+		  padding: 10px;
+		  border: solid 3px grey;
+		  transition: border 0.3s;
+		  border-radius: 4px;
+		}
+
+		input[type="email"] {
+		  padding: 10px;
+		  border: solid 3px grey;
+		  transition: border 0.3s;
+		  border-radius: 4px;
+		}
+
+		.button{
+			background-color: gainsboro; 
+		    border: none;
+		    color: black;
+		    padding: 15px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    border: 2px solid grey;
+		    border-radius: 4px;
+		}
+		/*gray part in middle of screen with slight gradient*/
+		div{
+			width: 1000px;
+			height: auto;
+			background: linear-gradient(to bottom right, gainsboro, gray);
+
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -1;
+
+			margin: auto;
+
+			border-radius: 150px;
 		}
 
 	</style>
@@ -50,11 +103,12 @@
   		<input type="password" placeholder="password" name="password">
   		<!-- Password field -->
   		<br><br><p2>Email:</p2><br>
-  		<input type="email" placeholder="me@example.net" name="email"><br>
+  		<input type="email" placeholder="me@example.net" name="email"><br><br><br>
   		<!-- Email field -->
-  		<br><input type="Submit" class="createAccount" value="Create Account" onclick="return validateForm()" /></input> 
+  		<br><input type="Submit" class="button" value="Create Account" onclick="return validateForm()" /></input> 
   		<!-- Runs validateForm() to check if fields are empty -->
 	</form>
+	<div></div>
 	</CENTER>
 </body>
 </html>
