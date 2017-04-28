@@ -55,6 +55,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <hr style="width:200px" class="w3-text-black">
     <p>Change this to the text boxes for submitting content.
     </p>
+  </div>
+
+  <div style="position: fixed; top: 93%; left: 92%;">
+      <p>FaceIt © 2017</p>
+  </div>
     
 </div>
 

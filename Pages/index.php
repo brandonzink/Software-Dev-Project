@@ -114,6 +114,11 @@ input[type="password"] {
     </CENTER>
 
 </header> 
+  
+   <div style="position: fixed; top: 95%; left: 67%;">
+      <p>FaceIt © 2017</p>
+  </div>
+
 </body>
 </html>
 
