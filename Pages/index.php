@@ -110,7 +110,13 @@ input[type="password"] {
 		<input type="Submit" class="button" value="Create Account"></input>
 		<!-- Sends to create account page -->
 	</form>
+
+  <div>
+    <p>Must be 13 or older</p>
+  </div>
+
 	<div class=mainbox></div>
+ 
     </CENTER>
 
 </header> 

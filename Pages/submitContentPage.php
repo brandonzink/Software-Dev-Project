@@ -68,10 +68,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       -->
       <!-- Create fields for a submission -->
       <p2>New Post:</p2><br>
-      <input style="width:400px" type="text" placeholder="Title" name="title"><br>
+      <input spellcheck="true" style="width:400px" type="text" placeholder="Title" name="title"><br>
       
       <p2>Content:</p2><br>
-      <textarea name="content" placeholder="Post Content" rows="10" cols="75"></textarea>
+      <textarea spellcheck="true" name="content" placeholder="Post Content" rows="10" cols="75"></textarea>
     </p>
    
   </div>
