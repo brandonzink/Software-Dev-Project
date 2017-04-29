@@ -83,7 +83,7 @@ function createAccount($mysqli, $username, $password, $email){
 			echo "That email is already being used for a different account.";
 		}else{
 			$sql = "INSERT INTO users (username, password, email) VALUES ($username, $password, $email)";
-			echo "We bouta create this account!!!!";
+			echo "Account created successfully!";
 		}
 	}
 
@@ -103,7 +103,7 @@ function editProfilePage($mysqli, $firstname, $lastname, $username, $description
 	if($statement){
 		echo "update succesful";
 	}else{
-		echo "fuck";
+		echo "update unsuccessful";
 	}
 
 
