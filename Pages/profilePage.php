@@ -55,7 +55,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -99,13 +99,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Email, work, about -->
 <h3>Email</h3>
-<p>Isuckcock@hotmail.com</p><br>
+<p>johndoe@gmail.com</p><br>
 
 <h3>Work</h3>
-<p>School of the mentally fucking retarted</p><br>
+<p>CU Boulder, Colorado</p><br>
 
 <h3>About</h3>
-<p>I like to jump on dudes cocks for a living, it really gets me going and I really like to excitement from getting a giant cock in that ass.</p>
+<p>Singing in the shower.</p>
 
 </body>
 </html>
