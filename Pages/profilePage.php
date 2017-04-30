@@ -86,6 +86,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>Facilitate conversation, share knowledge, and connect like minded people.</p>
   </header>
 
+<<<<<<< HEAD
+=======
+  <div style="position: fixed; top: 93%; left: 92%;">
+      <p>FaceIt © 2017</p>
+  </div>
+
+<!-- This is where the user profile goes --> <br>
+<!-- user name, edit profile button -->
+<name>Cam Connor</name>
+<form action="editProfilePage.php">
+		<input type="submit" class="button" value="Edit"></input>
+		<!-- Sends to create account page -->
+</form><br>
+>>>>>>> master
 
   <div class="w3-row w3-border">
   <div class="w3-twothird w3-container w3-gainsboro">
@@ -150,8 +164,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
 
+<<<<<<< HEAD
 
 
+=======
+<!-- Email, work, about -->
+<h3>Email</h3>
+<p>johndoe@gmail.com</p><br>
+
+<h3>Work</h3>
+<p>CU Boulder, Colorado</p><br>
+
+<h3>About</h3>
+<p>Singing in the shower.</p>
+>>>>>>> master
 
 </body>
 </html>
