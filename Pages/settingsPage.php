@@ -53,11 +53,27 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>Facilitate conversation, share knowledge, and connect like minded people.</p>
   </header>
 
+  <!-- Settings -->
+  <h2 class="w3-text-black">Settings</h2>
+    <ul class="w3-ul">
+      <li>Name</li>
+      <hr style="width:200px" class="w3-text-black">
+      <li>Username</li>
+      <hr style="width:200px" class="w3-text-black">
+      <li>Contact</li>
+
+    </ul>
+    
+</div>
+
   <div style="position: fixed; top: 93%; left: 92%;">
       <p>FaceIt © 2017</p>
   </div>
     
 </div>
+
+
+
 
 </body>
 </html>
