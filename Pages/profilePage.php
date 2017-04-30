@@ -86,7 +86,44 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>Facilitate conversation, share knowledge, and connect like minded people.</p>
   </header>
 
-  <!-- Update info form -->
+
+  <div class="w3-row w3-border">
+  <div class="w3-twothird w3-container w3-gainsboro">
+  <!-- left two thirds container -->
+  <div style="position: fixed; top: 93%; left: 92%;">
+      <p>FaceIt © 2017</p>
+  </div>
+
+
+  <!-- This is where the user profile goes --> <br>
+  <!-- user name, edit profile button -->
+    <name>Cam Connor</name>
+    <form action="editProfilePage.php">
+        <input type="submit" class="button" value="Edit"></input>
+        <!-- Sends to create account page -->
+    </form><br>
+
+    <!-- profile picture -->
+    <img src="Images/cammyfatty.jpg" id="profilepic" class="profile_pic" /><br>
+
+    <!-- Email, work, about -->
+    <h3>Email</h3>
+    <p>johndoe@gmail.com</p><br>
+
+    <h3>Work</h3>
+    <p>CU Boulder, Colorado</p><br>
+
+    <h3>About</h3>
+
+    <p>I like to jump on dudes cocks for a living, it really gets me going and I really like to excitement from getting a giant cock in that ass.</p>
+
+    <p>Singing in the shower.</p>
+
+  </div>
+  <div class="w3-third w3-container">
+  <!-- Right third container -->
+
+      <!-- Update info form -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-black">Update Info</h2>
     <hr style="width:200px" class="w3-text-black">
@@ -106,34 +143,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
 </div>
 
-  <div style="position: fixed; top: 93%; left: 92%;">
-      <p>FaceIt © 2017</p>
+  </div>
   </div>
 
 
-<!-- This is where the user profile goes --> <br>
-<!-- user name, edit profile button -->
-<name>Cam Connor</name>
-<form action="editProfilePage.php">
-		<input type="submit" class="button" value="Edit"></input>
-		<!-- Sends to create account page -->
-</form><br>
 
-<!-- profile picture -->
-<img src="Images/cammyfatty.jpg" id="profilepic" class="profile_pic" /><br>
 
-<!-- Email, work, about -->
-<h3>Email</h3>
-<p>johndoe@gmail.com</p><br>
 
-<h3>Work</h3>
-<p>CU Boulder, Colorado</p><br>
 
-<h3>About</h3>
 
-<p>I like to jump on dudes cocks for a living, it really gets me going and I really like to excitement from getting a giant cock in that ass.</p>
-
-<p>Singing in the shower.</p>
 
 </body>
 </html>
