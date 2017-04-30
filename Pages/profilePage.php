@@ -86,8 +86,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>Facilitate conversation, share knowledge, and connect like minded people.</p>
   </header>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   <!-- Update info form -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-black">Update Info</h2>
@@ -107,13 +105,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </p>
     
 </div>
-=======
-=======
+
   <div style="position: fixed; top: 93%; left: 92%;">
       <p>FaceIt © 2017</p>
   </div>
 
->>>>>>> master
 <!-- This is where the user profile goes --> <br>
 <!-- user name, edit profile button -->
 <name>Cam Connor</name>
@@ -133,12 +129,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <p>CU Boulder, Colorado</p><br>
 
 <h3>About</h3>
-<<<<<<< HEAD
-<p>I like to jump on dudes cocks for a living, it really gets me going and I really like to excitement from getting a giant cock in that ass.</p>
->>>>>>> master
-=======
 <p>Singing in the shower.</p>
->>>>>>> master
 
 </body>
 </html>
