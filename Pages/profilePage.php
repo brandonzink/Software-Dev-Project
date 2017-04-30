@@ -127,6 +127,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- Right third container -->
 
       <!-- Update info form -->
+  <!-- Update info form -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-black">Update Info</h2>
     <hr style="width:200px" class="w3-text-black">
@@ -148,17 +149,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
   </div>
   </div>
-
-<!-- Email, work, about -->
-<h3>Email</h3>
-<p>johndoe@gmail.com</p><br>
-
-<h3>Work</h3>
-<p>CU Boulder, Colorado</p><br>
-
-<h3>About</h3>
-<p>Singing in the shower.</p>
->>>>>>> master
 
 </body>
 </html>
