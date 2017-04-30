@@ -67,6 +67,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-globe w3-xxlarge"></i>
     <p>SUBMIT CONTENT</p>
   </a>
+  <a href="settingsPage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-bars w3-xxlarge"></i>
+    <p>SETTINGS</p>
+  </a>
   <a href="../scriptsPHP/logoutForm.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-sign-in w3-xxlarge"></i>
     <p>LOGOUT</p>
@@ -81,6 +85,26 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <h1 class="w3-jumbo"><span class="w3-hide-small"></span> FaceIt</h1>
     <p>Facilitate conversation, share knowledge, and connect like minded people.</p>
   </header>
+
+  <!-- Update info form -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-black">Update Info</h2>
+    <hr style="width:200px" class="w3-text-black">
+    <p>
+      <form method="post" action="../scriptsPHP/updateProfileForm.php">
+      First Name:<br>
+      <input type="text" name="firstname"><br>
+      Last Name:<br>
+      <input type="text" name="lastname"><br>
+      Profession :<br>
+      <input type="text" name="profession"><br>
+      Description:<br>
+      <input type="text" name="description"><br>
+      <input type="submit" value="Update">
+      </form>
+    </p>
+    
+</div>
 
   <div style="position: fixed; top: 93%; left: 92%;">
       <p>FaceIt © 2017</p>
