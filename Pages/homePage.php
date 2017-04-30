@@ -23,7 +23,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -55,6 +55,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <hr style="width:200px" class="w3-text-black">
     <p>Change this to the text boxes for submitting content.
     </p>
+  </div>
+
+  <div style="position: fixed; top: 93%; left: 92%;">
+      <p>FaceIt © 2017</p>
+  </div>
     
 </div>
 

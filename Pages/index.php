@@ -110,10 +110,21 @@ input[type="password"] {
 		<input type="Submit" class="button" value="Create Account"></input>
 		<!-- Sends to create account page -->
 	</form>
+
+  <div>
+    <p>Must be 13 or older</p>
+  </div>
+
 	<div class=mainbox></div>
+ 
     </CENTER>
 
 </header> 
+  
+   <div style="position: fixed; top: 95%; left: 67%;">
+      <p>FaceIt © 2017</p>
+  </div>
+
 </body>
 </html>
 

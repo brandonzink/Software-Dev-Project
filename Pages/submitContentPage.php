@@ -29,7 +29,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -68,12 +68,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       -->
       <!-- Create fields for a submission -->
       <p2>New Post:</p2><br>
-      <input style="width:400px" type="text" placeholder="Title" name="title"><br>
+      <input spellcheck="true" style="width:400px" type="text" placeholder="Title" name="title"><br>
       
       <p2>Content:</p2><br>
-      <textarea name="content" placeholder="Post Content" rows="10" cols="75"></textarea>
+      <textarea spellcheck="true" name="content" placeholder="Post Content" rows="10" cols="75"></textarea>
     </p>
-    
+   
+  </div>
+
+  <div style="position: fixed; top: 93%; left: 92%;">
+      <p>FaceIt © 2017</p>
+  </div>
+
 </div>
 
 </body>

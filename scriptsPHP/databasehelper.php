@@ -83,7 +83,7 @@ function createAccount($mysqli, $username, $password, $email){
 			echo "That email is already being used for a different account.";
 		}else{
 			$sql = "INSERT INTO users (username, password, email) VALUES ($username, $password, $email)";
-			echo "We bouta create this account!!!!";
+			echo "Account created successfully!";
 		}
 	}
 
@@ -94,16 +94,16 @@ function editProfilePage($mysqli, $firstname, $lastname, $username, $description
 
 
 //$sql = "INSERT INTO users (username, password, email) VALUES ($username, $password, $email)";
-	$emailCheck= "UPDATE users SET FirstName = ?, LastName = ?, Profession = ?, Description = ?";
-		$statement = $mysqli->prepare($emailCheck);
-		$statement->bind_param("ssss", $firstname, $lastname, $profession, $description);
-		$statement->execute();
+	$emailCheck= "UPDATE users SET firstname = ?, lastname = ?, profession = ?, description = ?";
+		if($statement = $mysqli->prepare($emailCheck)){
+			$statement->bind_param("ssss", $firstname, $lastname, $profession, $description);
+			$statement->execute();
+		}
+		else{print("Error. Please contact Administrator <br>\r\n <br>\r\n");}
 
-
-	if($statement){
-		echo "update succesful";
-	}else{
-		echo "fuck";
+	if(!$statement){
+		printf("Update Unsuccessful. Redirecting to Profile Page");
+		header( "refresh:5; url=http://localhost/Software-Dev-Project/Pages/profilePage.php" );
 	}
 
 

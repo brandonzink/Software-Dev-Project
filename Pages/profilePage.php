@@ -55,7 +55,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -83,6 +83,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </header>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   <!-- Update info form -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-black">Update Info</h2>
@@ -103,6 +104,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
 </div>
 =======
+=======
+  <div style="position: fixed; top: 93%; left: 92%;">
+      <p>FaceIt © 2017</p>
+  </div>
+
+>>>>>>> master
 <!-- This is where the user profile goes --> <br>
 <!-- user name, edit profile button -->
 <name>Cam Connor</name>
@@ -116,13 +123,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Email, work, about -->
 <h3>Email</h3>
-<p>Isuckcock@hotmail.com</p><br>
+<p>johndoe@gmail.com</p><br>
 
 <h3>Work</h3>
-<p>School of the mentally fucking retarted</p><br>
+<p>CU Boulder, Colorado</p><br>
 
 <h3>About</h3>
+<<<<<<< HEAD
 <p>I like to jump on dudes cocks for a living, it really gets me going and I really like to excitement from getting a giant cock in that ass.</p>
+>>>>>>> master
+=======
+<p>Singing in the shower.</p>
 >>>>>>> master
 
 </body>
