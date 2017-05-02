@@ -17,6 +17,16 @@ class PostUser {
 	public $profilePicURL;
 }
 
+class UserProfile{
+	public $ID;
+	public $username;
+	public $firstName;
+	public $lastName;
+	public $email;
+	public $description;
+	public $profilePicURL;
+}
+
 
 function getDB(){//replace all other uses so that when site goes live I only have to change this function from root,root
   return new mysqli("localhost", "root", "root", "faceit");
@@ -176,6 +186,38 @@ function retrievePosts($mysqli){
     }else{
     	return false;
     }
+}
+
+function getUserProfile($mysqli, $userID){
+
+	$query = "SELECT ID, Username, FirstName, LastName, Email, Description, ProfilePicURL FROM Users WHERE ID = ?";
+
+	$statement = $mysqli->prepare($query);
+	$statement->bind_param("i", $userID);
+	$statement->execute();
+
+	$result = $statement->get_result();
+	$row = $result->fetch_array(MYSQLI_NUM);
+
+	$row_count = mysqli_num_rows($result);
+
+	if($row_count > 0){
+		$p = new UserProfile();
+		$p->ID = $row[0];
+		$p->username = $row[1];
+		$p->firstName = $row[2];
+		$p->lastName = $row[3];
+		$p->email = $row[4];
+		$p->description = $row[5];
+		$p->profilePicURL = $row[6];
+
+		return $p;
+
+	}else{
+		return false;
+	}
+
+
 }
 
 
