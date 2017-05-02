@@ -29,7 +29,7 @@ class UserProfile{
 
 
 function getDB(){//replace all other uses so that when site goes live I only have to change this function from root,root
-  return new mysqli("localhost", "root", "root", "faceit");
+  return new mysqli("localhost", "root", "", "faceit");
 }
 
 function loginCheck($mysqli, $username, $password){
@@ -109,29 +109,65 @@ function createAccount($mysqli, $username, $password, $email){
 		if($row_count > 0){
 			echo "That email is already being used for a different account.";
 		}else{
-			$sql = "INSERT INTO users (username, password, email) VALUES ($username, $password, $email)";
-			echo "Account created successfully!";
+			$sql = "INSERT INTO users (Username, Password, Email) VALUES (?, ?, ?)";
+			if($statement = $mysqli->prepare($sql)){
+				$statement->bind_param("sss", $username, password_hash($password, PASSWORD_DEFAULT), $email);
+				$statement->execute();
+
+				if($statement){
+					setcookie("userID",$statement->insert_id, false, '/');
+					header( "Location: ../Pages/profilePage.php?id=".$statement->insert_id);
+				}else{
+					print("Error. Please contact Administrator <br>\r\n <br>\r\n");
+				}
+			}else{
+				print("Error. Please contact Administrator <br>\r\n <br>\r\n");
+			}
 		}
 	}
 
 }
 
-function editProfilePage($mysqli, $firstname, $lastname, $username, $description){
+function editProfilePage($mysqli, $firstname, $lastname, $email,$description, $userID){
 
 
 
-//$sql = "INSERT INTO users (username, password, email) VALUES ($username, $password, $email)";
-	$emailCheck= "UPDATE users SET firstname = ?, lastname = ?, profession = ?, description = ?";
+	$emailCheck= "UPDATE users SET FirstName = ?, LastName = ?, Description = ?, Email = ? WHERE ID = ?";
 		if($statement = $mysqli->prepare($emailCheck)){
-			$statement->bind_param("ssss", $firstname, $lastname, $profession, $description);
+			$statement->bind_param("ssssi", $firstname, $lastname, $description, $email, $userID);
 			$statement->execute();
-		}
-		else{print("Error. Please contact Administrator <br>\r\n <br>\r\n");}
 
-	if(!$statement){
-		header( "Location: ../Pages/profilePage.php" );
-	}
-	
+			if($statement){
+				return true;
+			}else{
+				return false;
+			}
+
+		}else{
+			return false;
+		}
+
+}
+
+function updateProfileImageURL($mysqli, $imageURL, $userID){
+
+
+
+	$query = "UPDATE users SET ProfilePicURL = ? WHERE ID = ?";
+		if($statement = $mysqli->prepare($query)){
+			$statement->bind_param("si", $imageURL, $userID);
+			$statement->execute();
+
+			if($statement){
+				return true;
+			}else{
+				return false;
+			}
+
+		}else{
+			return false;
+		}
+
 }
 
 

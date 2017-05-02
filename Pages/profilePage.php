@@ -142,15 +142,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
               <h2 class="w3-text-black">Update Info</h2>
               <hr style="width:200px" class="w3-text-black">
               <p>
-                <form method="post" action="../scriptsPHP/updateProfileForm.php">
+                <form method="post" action="../scriptsPHP/updateProfileForm.php" enctype="multipart/form-data">
                 First Name:<br>
-                <input type="text" name="firstname"><br>
+                <input type="text" name="firstname" value="'.$profile->firstName.'"/><br>
                 Last Name:<br>
-                <input type="text" name="lastname"><br>
-                Profession :<br>
-                <input type="text" name="profession"><br>
+                <input type="text" name="lastname" value="'.$profile->lastName.'"/><br>
+                Email :<br>
+                <input type="text" name="email" value="'.$profile->email.'"/><br>
                 Description:<br>
-                <input type="text" name="description"><br>
+                <textarea type="text" name="description">'.$profile->description.'</textarea><br><br>
+                Upload new Profile Picture:<br>
+                <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
                 <input type="submit" value="Update">
                 </form>
               </p>
