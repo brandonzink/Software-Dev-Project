@@ -128,13 +128,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <li>Username</li>
       <hr style="width:200px" class="w3-text-black">
       <li>Contact</li>
-      <li>Public / Private</li><
-        <!-- Rounded switch/slider -->
+        <!-- Rounded switch/slider for public or private info
         <label class="switch">
           <input type="checkbox">
           <div class="slider round"></div>
         </label>
-
+        -->
     </ul>
     
 </div>
