@@ -2,7 +2,7 @@
 
 
 function getDB(){//replace all other uses so that when site goes live I only have to change this function from root,root
-  return new mysqli("localhost", "root", "", "faceit");
+  return new mysqli("localhost", "root", "root", "faceit");
 }
 
 function loginCheck($mysqli, $username, $password){
@@ -102,12 +102,26 @@ function editProfilePage($mysqli, $firstname, $lastname, $username, $description
 		else{print("Error. Please contact Administrator <br>\r\n <br>\r\n");}
 
 	if(!$statement){
-		printf("Update Unsuccessful. Redirecting to Profile Page");
-		header( "refresh:5; url=http://localhost/Software-Dev-Project/Pages/profilePage.php" );
+		header( "Location: ../Pages/profilePage.php" );
 	}
-
-
 	
+}
+
+
+function submitPost($mysqli, $title, $text, $posterID){
+	$query = "INSERT INTO posts (Title, Text, PosterID) VALUES (?, ?, ?)";
+	if($statement = $mysqli->prepare($query)){
+		$statement->bind_param("ssi", $title, $text, $posterID);
+		$statement->execute();
+
+		if($statement){
+			header( "Location: ../Pages/homePage.php" );
+		}else{
+			print("Error. Please contact Administrator <br>\r\n <br>\r\n");
+		}
+	}else{
+		print("Error. Please contact Administrator <br>\r\n <br>\r\n");
+	}
 }
 
 
