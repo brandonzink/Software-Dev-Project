@@ -8,7 +8,7 @@ $posterID = $_COOKIE["userID"];
 
 $mysqli = getDB();
 
-submitPost($mysqli, $title, $text, $posterID);
+submitPost($mysqli, $mysqli->real_escape_string($title), $mysqli->real_escape_string($text), $posterID);
 
 $mysqli->close();
 

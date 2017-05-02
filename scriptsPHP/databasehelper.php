@@ -1,5 +1,22 @@
 <?php
 
+class Post {
+	public $ID;
+	public $title;
+	public $text;
+	public $timestamp;
+	public $comments;
+	public $posterProfile;
+	public $numComments;
+}
+
+class PostUser {
+	public $posterID;
+	public $firstName;
+	public $lastName;
+	public $profilePicURL;
+}
+
 
 function getDB(){//replace all other uses so that when site goes live I only have to change this function from root,root
   return new mysqli("localhost", "root", "root", "faceit");
@@ -122,6 +139,43 @@ function submitPost($mysqli, $title, $text, $posterID){
 	}else{
 		print("Error. Please contact Administrator <br>\r\n <br>\r\n");
 	}
+}
+
+function retrievePosts($mysqli){
+	$query = "SELECT posts.ID, Title, Text, PosterID, Timestamp, users.FirstName, users.LastName, users.ProfilePicURL, (SELECT COUNT(*) FROM comments WHERE comments.PostID = posts.ID) as numComments FROM posts LEFT JOIN users on users.ID = posts.PosterID ORDER BY posts.ID DESC";
+
+
+    $statement = $mysqli->prepare($query);
+    $statement->execute();
+    $result = $statement->get_result();
+
+    $posts = array();
+    $i = 0;
+      while($row = $result->fetch_array(MYSQLI_NUM)){
+        $p = new Post();
+          $p->ID = $row[0];
+          $p->title = $row[1];
+          $p->text = $row[2];
+          $p->timestamp = $row[4];
+
+          $pu = new PostUser();
+          $pu->posterID = $row[3];
+          $pu->firstName = $row[5];
+          $pu->lastName = $row[6];
+          $pu->profilePicURL = $row[7];
+
+          $p->posterProfile = $pu;
+          $p->numComments = $row[8];
+
+        $posts[$i] = $p;
+        $i++;
+      }
+     
+    if(sizeof($posts) > 0){
+    	return $posts;
+    }else{
+    	return false;
+    }
 }
 
 

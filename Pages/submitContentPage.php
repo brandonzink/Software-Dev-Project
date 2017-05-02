@@ -99,7 +99,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   {
       var a=$("#title").val();
       var b=$("#content").val();
-      if(a==null || a=="",b==null || b=="")
+      if((a==null || a=="") || (b==null || b==""))
       {
         alert("Please fill all required fields");
         return false;
