@@ -1,5 +1,7 @@
 <?php
 
+// Sends post information to the database
+
 include_once("databasehelper.php");
 
 $title = $_POST["title"];

@@ -1,7 +1,16 @@
 <?php
+// Check if the user is logged in, if so allow them to access their profile page
 if(isset($_COOKIE["userID"])){
   header('Location: profilePage.php');
 }
+
+  /*! 
+   * This is index page
+   * It uses classes imported fro w3schools.com for stylization and page layout
+   * Local classes are defined within the style tags
+   *
+   */
+
 ?>
 
 <!DOCTYPE html>

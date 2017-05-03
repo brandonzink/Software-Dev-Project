@@ -1,4 +1,9 @@
 <?php
+/* This script sends the data gathered from the create account forms and sends it to be 
+ * logged in the database
+ *
+ *
+ */
 
 include_once("databasehelper.php");
 

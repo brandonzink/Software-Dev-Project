@@ -1,4 +1,5 @@
 <?php
+// Check if the user is logged in, if so allow them to access their profile page
 if(!isset($_COOKIE["userID"])){
   header('Location: index.php');
 }
