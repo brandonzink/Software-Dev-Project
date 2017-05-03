@@ -8,6 +8,9 @@ include_once("../scriptsPHP/databasehelper.php");
   $posts = retrievePosts($mysqli);
   $mysqli->close();
 
+  // date_default_timezone_set('America/Denver');
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,10 +41,10 @@ include_once("../scriptsPHP/databasehelper.php");
     <i class="fa fa-globe w3-xxlarge"></i>
     <p>SUBMIT CONTENT</p>
   </a>
-  <a href="settingsPage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+<!--   <a href="settingsPage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-bars w3-xxlarge"></i>
     <p>SETTINGS</p>
-  </a>
+  </a> -->
   <a href="../scriptsPHP/logoutForm.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-sign-in w3-xxlarge"></i>
     <p>LOGOUT</p>
@@ -100,7 +103,7 @@ include_once("../scriptsPHP/databasehelper.php");
 
           var name = p['posterProfile']['firstName'] + ' ' +p['posterProfile']['lastName'];
 
-          var stamp = Date.parse(p['timestamp']).getTime()/1000; // dont need to convert because both times being compared are in UTC
+          var stamp = (Date.parse(p['timestamp']).getTime()/1000) - 21600; // dont need to convert because both times being compared are in UTC
           console.log(stamp + " - " +  <?php echo time(); ?>)
 
           var name = "<a href='../Pages/profilePage.php?id=" +  p['posterProfile']['posterID'] + "' class='nameLink'>" + name + "</a>"

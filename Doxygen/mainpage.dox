@@ -1,0 +1,19 @@
+/*! \mainpage FaceIt
+ *
+ * \section intro_sec Introduction
+ *
+ * Thank you for using FaceIt! We hope you enjoy our little demo, we've spent a lot of time making
+ * and have learned a ton.
+ *
+ * \section install_sec Installation
+ *
+ * For simplicity and due to time constraint, we did not have time to publicly host this. Instead, we will
+ * walk you through the steps to use FaceIt.
+ * 1. Download XAMPP, this is used to interpret the PHP and host the database locally.
+ * 2. Open phpMyAdmin and create a new database called "faceit". Then click import and select the 
+ * "faceit.SQL" file to import. This will create the database.
+ * 3. Launch the site by using localhost and whatever foler directory the files are stored in. 
+ * 4. You can create your own account, and change settings. Some base profiles and posts have already been inputted.
+ *
+ *
+ */

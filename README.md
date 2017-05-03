@@ -10,6 +10,42 @@ Channing Hurley; channinghurley
 Title:  
 FaceIt (Work in progress, subject to change)  
   
+**PART 6 INFORMATION**  
+  
+*Organization*  
+The **auto doc** html files are in the Doxygen folder, then html for the webpage(s).  
+The "Old Projects Parts" foler contains the TESTING.md file and original screenshot from the
+project tracking software.  
+The **Pages** folder contains all of the html, CSS, and php for the pages themselves, not the
+scripts for the database or other functions.  
+The **profile pics** folder is used to store the user profile pics.  
+The **scriptsPHP** folder contains all of the scripts and database helpers for the back end.  
+The **final presentation** is the FaceIt_part_5.pptx, the **database** is the faceit.sql file,
+and **data.js** is a javascript function to get the date for the posts, you can ingore that.  
+  
+  
+*How to run it*  
+http://www.fondobike.com/Software-Dev-Project/Pages/index.php  
+^Go to that site, Cam was able to use a domain he already owned.  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+**OLD PARTS TO README**  
+    
 Desription:  
 A website used to share links, ideas, connect people, and facilitate growth driven conversation in an online enviroment. If you're familiar with Reddit and Facebook, a mashed together version of the two in sorts.  
   

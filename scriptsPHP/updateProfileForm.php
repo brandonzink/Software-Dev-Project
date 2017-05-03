@@ -25,10 +25,10 @@ if(!empty($_FILES["fileToUpload"]["tmp_name"])) {
     if($check !== false) {
         echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
-         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], str_replace(' ', '', $target_file))) {
          	$mysqli = getDB();
 
-			updateProfileImageURL($mysqli, $mysqli->real_escape_string($fileName), $userID);
+			updateProfileImageURL($mysqli, $mysqli->real_escape_string(str_replace(' ', '', $fileName)), $userID);
 
 			$mysqli->close();
 
