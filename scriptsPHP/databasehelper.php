@@ -36,12 +36,14 @@ class UserProfile{
 
 
 function getDB(){//replace all other uses so that when site goes live I only have to change this function from root,root
-  return new mysqli("localhost", "root", "", "faceit");
+  // return new mysqli("localhost", "root", "", "faceit");
+	  return new mysqli("173.194.225.113", "root", "helloworld", "faceit");
+
 }
 
 //!Checks to see if the user is logged in already
 function loginCheck($mysqli, $username, $password){
-	$query = "SELECT ID,Password FROM Users WHERE username = ?";
+	$query = "SELECT ID,Password FROM users WHERE username = ?";
 
 	$statement = $mysqli->prepare($query);
 	$statement->bind_param("s", $username);
@@ -75,7 +77,7 @@ function loginCheck($mysqli, $username, $password){
 function createAccount($mysqli, $username, $password, $email){
 
 	// Check if username is a duplicate
-	$usernameCheck = 'SELECT * FROM Users WHERE username = ?';
+	$usernameCheck = 'SELECT * FROM users WHERE username = ?';
 
 	$statement = $mysqli->prepare($usernameCheck);
 	$statement->bind_param("s", $username);
@@ -223,7 +225,7 @@ function retrievePosts($mysqli){
 /// \fn Gets the profile pic from the database to display
 function getUserProfile($mysqli, $userID){
 
-	$query = "SELECT ID, Username, FirstName, LastName, Email, Description, ProfilePicURL FROM Users WHERE ID = ?";
+	$query = "SELECT ID, Username, FirstName, LastName, Email, Description, ProfilePicURL FROM users WHERE ID = ?";
 
 	$statement = $mysqli->prepare($query);
 	$statement->bind_param("i", $userID);

@@ -38,10 +38,10 @@ include_once("../scriptsPHP/databasehelper.php");
     <i class="fa fa-globe w3-xxlarge"></i>
     <p>SUBMIT CONTENT</p>
   </a>
-  <a href="settingsPage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+<!--   <a href="settingsPage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-bars w3-xxlarge"></i>
     <p>SETTINGS</p>
-  </a>
+  </a> -->
   <a href="../scriptsPHP/logoutForm.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-sign-in w3-xxlarge"></i>
     <p>LOGOUT</p>
