@@ -126,6 +126,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <li>Username</li>
       <hr style="width:200px" class="w3-text-black">
       <li>Contact</li>
+        
     
 </div>
 
