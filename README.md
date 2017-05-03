@@ -10,6 +10,46 @@ Channing Hurley; channinghurley
 Title:  
 FaceIt (Work in progress, subject to change)  
   
+**PART 6 INFORMATION**  
+  
+*Organization*  
+The **auto doc** html files are in the Doxygen folder, then html for the webpage(s).  
+The "Old Projects Parts" foler contains the TESTING.md file and original screenshot from the
+project tracking software.  
+The **Pages** folder contains all of the html, CSS, and php for the pages themselves, not the
+scripts for the database or other functions.  
+The **profile pics** folder is used to store the user profile pics.  
+The **scriptsPHP** folder contains all of the scripts and database helpers for the back end.  
+The **final presentation** is the FaceIt_part_5.pptx, the **database** is the faceit.sql file,
+and **data.js** is a javascript function to get the date for the posts, you can ingore that.  
+  
+  
+*How to run it*
+1. We used XAMPP to interpret the PHP and host the database, it is only local due to convenience (we were already learning enough things, let alone working with live database) and time constraints. The download link is: https://www.apachefriends.org/download.html
+2. Once you have XAMPP installed, start "Apache" and "MySQL".  
+3. Open phpMyAdmin, create a new database called "faceit". Click import, and import th faceit.sql file in the main folder.  
+4. You can now use every feauture on the site! You can create an account, and there are already other user accounts and posts that are in your database for you to interact with.  
+  
+We apologize for the number of steps to get this set up and running. We struggled with hosting it otherwise, and this was the most convenient route for us to work with throughout the semester. Thanks.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+**OLD PARTS TO README**  
+    
 Desription:  
 A website used to share links, ideas, connect people, and facilitate growth driven conversation in an online enviroment. If you're familiar with Reddit and Facebook, a mashed together version of the two in sorts.  
   
