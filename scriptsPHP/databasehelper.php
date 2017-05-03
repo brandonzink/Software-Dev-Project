@@ -1,30 +1,37 @@
 <?php
 
+
+/// \class Post. 
+/// Used to store post information in the database
 class Post {
-	public $ID;
-	public $title;
-	public $text;
-	public $timestamp;
-	public $comments;
-	public $posterProfile;
-	public $numComments;
+	public $ID; ///<used to link tables together
+	public $title; ///<title of the post
+	public $text; ///<text or link contained in the post
+	public $timestamp; ///<time stamp used for time since outptut
+	public $comments; ///<comments on the post, not yet implimented
+	public $posterProfile; ///<user who posted it
+	public $numComments; ///<the number of comments on the post
 }
 
+/// \class PostUser. 
+/// Used to store user information for a given post in the database
 class PostUser {
-	public $posterID;
-	public $firstName;
-	public $lastName;
-	public $profilePicURL;
+	public $posterID; ///<ID of the user who posts from UserProfile table
+	public $firstName; ///<First name of user
+	public $lastName; ///<Last name of user
+	public $profilePicURL; ///<URL to the profile pic
 }
 
+/// \class UserProfile. 
+/// Used to store user information in the database for their profile
 class UserProfile{
-	public $ID;
-	public $username;
-	public $firstName;
-	public $lastName;
-	public $email;
-	public $description;
-	public $profilePicURL;
+	public $ID; ///<ID of the user table
+	public $username; ///<User uername, unique
+	public $firstName; ///<First name of user
+	public $lastName;///<Last name of user
+	public $email; ///<Email of user
+	public $description; ///<User defined description
+	public $profilePicURL; ///<URL to the profile pic
 }
 
 
@@ -32,6 +39,7 @@ function getDB(){//replace all other uses so that when site goes live I only hav
   return new mysqli("localhost", "root", "", "faceit");
 }
 
+//!Checks to see if the user is logged in already
 function loginCheck($mysqli, $username, $password){
 	$query = "SELECT ID,Password FROM Users WHERE username = ?";
 
@@ -63,23 +71,8 @@ function loginCheck($mysqli, $username, $password){
     }
 }
 
+//!Used to create the account
 function createAccount($mysqli, $username, $password, $email){
-	// // Check if username is a duplicate
-	// $usernameCheck=mysql_query("SELECT * FROM users (username, password, email) WHERE username=$username");
-	// if(mysqul_num_row($usernameCheck)>=1){
-	// 	echo"That username is already being used.";
-	// }
-
-	// // Check if email is a duplicate
-	// $emailCheck=mysql_query("SELECT * FROM users (username, password, email) WHERE email=$email");
-	// else if(mysqul_num_row($emailCheck)>=1){
-	// 	echo "That email is already being used for a different account.";
-	// }
-
-	// else{
-	// 	$sql = "INSERT INTO users (username, password, email)
-	// 	VALUES ($username, $password, $email)";
-	// }
 
 	// Check if username is a duplicate
 	$usernameCheck = 'SELECT * FROM Users WHERE username = ?';
@@ -128,6 +121,7 @@ function createAccount($mysqli, $username, $password, $email){
 
 }
 
+//!Used to edit profile page and push changes to database
 function editProfilePage($mysqli, $firstname, $lastname, $email,$description, $userID){
 
 
@@ -149,6 +143,7 @@ function editProfilePage($mysqli, $firstname, $lastname, $email,$description, $u
 
 }
 
+//! Updates the profile pic in database
 function updateProfileImageURL($mysqli, $imageURL, $userID){
 
 
@@ -170,7 +165,7 @@ function updateProfileImageURL($mysqli, $imageURL, $userID){
 
 }
 
-
+//!Submits a post to the database
 function submitPost($mysqli, $title, $text, $posterID){
 	$query = "INSERT INTO posts (Title, Text, PosterID) VALUES (?, ?, ?)";
 	if($statement = $mysqli->prepare($query)){
@@ -187,6 +182,7 @@ function submitPost($mysqli, $title, $text, $posterID){
 	}
 }
 
+//!Get posts from the database, displays on main page
 function retrievePosts($mysqli){
 	$query = "SELECT posts.ID, Title, Text, PosterID, Timestamp, users.FirstName, users.LastName, users.ProfilePicURL, (SELECT COUNT(*) FROM comments WHERE comments.PostID = posts.ID) as numComments FROM posts LEFT JOIN users on users.ID = posts.PosterID ORDER BY posts.ID DESC";
 
@@ -224,6 +220,7 @@ function retrievePosts($mysqli){
     }
 }
 
+/// \fn Gets the profile pic from the database to display
 function getUserProfile($mysqli, $userID){
 
 	$query = "SELECT ID, Username, FirstName, LastName, Email, Description, ProfilePicURL FROM Users WHERE ID = ?";

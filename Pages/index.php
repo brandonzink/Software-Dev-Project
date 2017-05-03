@@ -1,6 +1,4 @@
 <?php
-
-//cookies for login 
 if(isset($_COOKIE["userID"])){
   header('Location: profilePage.php');
 }
@@ -107,8 +105,7 @@ input[type="password"] {
   		<br><input type="Submit" class="button" value="Login" onclick="return validateForm()" /></input> 
   		<!-- Checks to see if fields are left empty -->
 	</form>
-	
-  <p>Not registered? Create and account now!</p>
+	<br>
 	<form action="createAccount.php">
 		<input type="Submit" class="button" value="Create Account"></input>
 		<!-- Sends to create account page -->
@@ -116,18 +113,6 @@ input[type="password"] {
 
   <div>
     <p>Must be 13 or older</p>
-  </div>
-
-  <br>
-
-  <div>
-    <h1> About FaceIt </h1>
-    <h5>FaceIt is a small company drive to evolve the online social experience to the best it can be!</h5>
-  </div>
-
-  <div style="position: fixed; top: 95%; left: 30%;">
-    <p>Have any question? Call 555-555-55555 or email FaceItHelp@gmail.com</p>
-
   </div>
 
 	<div class=mainbox></div>
