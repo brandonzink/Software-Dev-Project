@@ -25,12 +25,8 @@ and **data.js** is a javascript function to get the date for the posts, you can 
   
   
 *How to run it*
-1. We used XAMPP to interpret the PHP and host the database, it is only local due to convenience (we were already learning enough things, let alone working with live database) and time constraints. The download link is: https://www.apachefriends.org/download.html
-2. Once you have XAMPP installed, start "Apache" and "MySQL".  
-3. Open phpMyAdmin, create a new database called "faceit". Click import, and import th faceit.sql file in the main folder.  
-4. You can now use every feauture on the site! You can create an account, and there are already other user accounts and posts that are in your database for you to interact with.  
-  
-We apologize for the number of steps to get this set up and running. We struggled with hosting it otherwise, and this was the most convenient route for us to work with throughout the semester. Thanks.
+http://www.fondobike.com/Software-Dev-Project/Pages/index.php
+^Go to that site, Cam was able to use a domain he already owned.
     
     
     
