@@ -1,7 +1,18 @@
 <?php
-if(!isset($_COOKIE["userID"])){
-  header('Location: index.php');
-}
+  include_once("../scriptsPHP/databasehelper.php");
+
+  if(!isset($_COOKIE["userID"])){
+    header('Location: index.php');
+  }
+
+  $userID_loggedIn = (isset($_COOKIE["userID"])) ? $_COOKIE["userID"] : -1;
+  $userID_profOwner = (isset($_GET["id"])) ? $_GET["id"] : $_COOKIE["userID"];
+
+
+  $mysqli = getDB();
+  $profile = getUserProfile($mysqli, $userID_profOwner);
+  $mysqli->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +66,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -66,6 +77,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <a href="submitContentPage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-globe w3-xxlarge"></i>
     <p>SUBMIT CONTENT</p>
+  </a>
+  <a href="settingsPage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-bars w3-xxlarge"></i>
+    <p>SETTINGS</p>
   </a>
   <a href="../scriptsPHP/logoutForm.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-sign-in w3-xxlarge"></i>
@@ -86,26 +101,70 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p>FaceIt © 2017</p>
   </div>
 
-<!-- This is where the user profile goes --> <br>
-<!-- user name, edit profile button -->
-<name>Cam Connor</name>
-<form action="editProfilePage.php">
-		<input type="submit" class="button" value="Edit"></input>
-		<!-- Sends to create account page -->
-</form><br>
+  <div class="w3-row w3-border">
+  <div class="w3-twothird w3-container w3-gainsboro">
+  <!-- left two thirds container -->
+  <div style="position: fixed; top: 93%; left: 92%;">
+      <p>FaceIt © 2017</p>
+  </div>
 
-<!-- profile picture -->
-<img src="Images/cammyfatty.jpg" id="profilepic" class="profile_pic" /><br>
 
-<!-- Email, work, about -->
-<h3>Email</h3>
-<p>Isuckcock@hotmail.com</p><br>
+  <!-- This is where the user profile goes --> <br>
+  <!-- user name, edit profile button -->
+    <name><?php echo $profile->firstName." ".$profile->lastName; ?></name>
+   <!--  <form action="editProfilePage.php">
+        <input type="submit" class="button" value="Edit"></input>
+        <!-- Sends to create account page -->
+    <!-- </form> -->
+    <br>
 
-<h3>Work</h3>
-<p>School of the mentally fucking retarted</p><br>
+    <!-- profile picture -->
+    <img src="../profilepics/<?php echo (!empty($profile->profilePicURL)) ? $profile->profilePicURL : 'noProfPic.png'; ?>" id="profilepic" class="profile_pic" /><br>
 
-<h3>About</h3>
-<p>I like to jump on dudes cocks for a living, it really gets me going and I really like to excitement from getting a giant cock in that ass.</p>
+    <!-- Email, work, about -->
+    <h3>Email</h3>
+    <p><?php echo $profile->email; ?></p><br>
+
+    <h3>About</h3>
+
+    <p><?php echo $profile->description; ?></p>
+
+  </div>
+  <div class="w3-third w3-container">
+  <!-- Right third container -->
+
+      <!-- Update info form -->
+  <!-- Update info form -->
+  <?php
+
+    if($userID_loggedIn == $userID_profOwner){
+      echo '<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+              <h2 class="w3-text-black">Update Info</h2>
+              <hr style="width:200px" class="w3-text-black">
+              <p>
+                <form method="post" action="../scriptsPHP/updateProfileForm.php" enctype="multipart/form-data">
+                First Name:<br>
+                <input type="text" name="firstname" value="'.$profile->firstName.'"/><br>
+                Last Name:<br>
+                <input type="text" name="lastname" value="'.$profile->lastName.'"/><br>
+                Email :<br>
+                <input type="text" name="email" value="'.$profile->email.'"/><br>
+                Description:<br>
+                <textarea type="text" name="description">'.$profile->description.'</textarea><br><br>
+                Upload new Profile Picture:<br>
+                <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+                <input type="submit" value="Update">
+                </form>
+              </p>
+              
+            </div>';
+    }
+
+  ?>
+  
+
+  </div>
+  </div>
 
 </body>
 </html>

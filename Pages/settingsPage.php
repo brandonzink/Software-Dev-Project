@@ -6,18 +6,77 @@ if(!isset($_COOKIE["userID"])){
 
 <!DOCTYPE html>
 <html>
-<title>Submit Content</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+<title>Settings</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
+    /* Class for switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {display:none;}
+
+    /* The slider within the switch */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #66CD00;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
 		body{
 			background-color: gainsboro;
 		}
+
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
@@ -61,59 +120,32 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>Facilitate conversation, share knowledge, and connect like minded people.</p>
   </header>
 
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-black">Submit Content</h2>
-    <hr style="width:200px" class="w3-text-black">
-    <p>
-      <!--
-      Code to interact with database...
-
-      <form method="post" id="submitContent" name="submitContent" action="">
-      
-      -->
-      <!-- Create fields for a submission -->
-      <form method="post" id="submitPost" name="createAccount" action="../scriptsPHP/submitPostForm.php">
-        <p2>New Post:</p2><br>
-        <input spellcheck="true" style="width:400px" type="text" placeholder="Title" name="title" id="title"><br>
-        
-        <p2>Content:</p2><br>
-        <textarea spellcheck="true" name="content" id="content" placeholder="Post Content" rows="10" cols="75"></textarea>
-        <br>
-        <input type="submit" onclick="return validateForm()"></input>
-      </form>
-    </p>
-   
-  </div>
+  <!-- Settings -->
+  <h2 class="w3-text-black">Settings</h2>
+    <ul class="w3-ul">
+      <li>Name</li>
+      <hr style="width:200px" class="w3-text-black">
+      <li>Username</li>
+      <hr style="width:200px" class="w3-text-black">
+      <li>Contact</li>
+        <!-- Rounded switch/slider for public or private info
+        <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        -->
+    </ul>
+    
+</div>
 
   <div style="position: fixed; top: 93%; left: 92%;">
       <p>FaceIt © 2017</p>
   </div>
-
+    
 </div>
 
-<script type="text/javascript">
 
 
-  function validateForm()
-  {
-      var a=$("#title").val();
-      var b=$("#content").val();
-      if((a==null || a=="") || (b==null || b==""))
-      {
-        alert("Please fill all required fields");
-        return false;
-      }
-  }
-  
-  // $(document).ready(function(){
-
-
-
-  // });
-
-
-</script>
 
 </body>
 </html>
