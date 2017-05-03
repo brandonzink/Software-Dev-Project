@@ -24,9 +24,9 @@ The **final presentation** is the FaceIt_part_5.pptx, the **database** is the fa
 and **data.js** is a javascript function to get the date for the posts, you can ingore that.  
   
   
-*How to run it*
-http://www.fondobike.com/Software-Dev-Project/Pages/index.php
-^Go to that site, Cam was able to use a domain he already owned.
+*How to run it*  
+http://www.fondobike.com/Software-Dev-Project/Pages/index.php  
+^Go to that site, Cam was able to use a domain he already owned.  
     
     
     
