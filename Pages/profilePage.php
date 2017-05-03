@@ -1,7 +1,18 @@
 <?php
-if(!isset($_COOKIE["userID"])){
-  header('Location: index.php');
-}
+  include_once("../scriptsPHP/databasehelper.php");
+
+  if(!isset($_COOKIE["userID"])){
+    header('Location: index.php');
+  }
+
+  $userID_loggedIn = (isset($_COOKIE["userID"])) ? $_COOKIE["userID"] : -1;
+  $userID_profOwner = (isset($_GET["id"])) ? $_GET["id"] : $_COOKIE["userID"];
+
+
+  $mysqli = getDB();
+  $profile = getUserProfile($mysqli, $userID_profOwner);
+  $mysqli->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -100,27 +111,23 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
   <!-- This is where the user profile goes --> <br>
   <!-- user name, edit profile button -->
-    <name>Cam Connor</name>
-    <form action="editProfilePage.php">
+    <name><?php echo $profile->firstName." ".$profile->lastName; ?></name>
+   <!--  <form action="editProfilePage.php">
         <input type="submit" class="button" value="Edit"></input>
         <!-- Sends to create account page -->
-    </form><br>
+    <!-- </form> -->
+    <br>
 
     <!-- profile picture -->
-    <img src="Images/cammyfatty.jpg" id="profilepic" class="profile_pic" /><br>
+    <img src="../profilepics/<?php echo (!empty($profile->profilePicURL)) ? $profile->profilePicURL : 'noProfPic.png'; ?>" id="profilepic" class="profile_pic" /><br>
 
     <!-- Email, work, about -->
     <h3>Email</h3>
-    <p>johndoe@gmail.com</p><br>
-
-    <h3>Work</h3>
-    <p>CU Boulder, Colorado</p><br>
+    <p><?php echo $profile->email; ?></p><br>
 
     <h3>About</h3>
 
-    <p>I like to jump on dudes cocks for a living, it really gets me going and I really like to excitement from getting a giant cock in that ass.</p>
-
-    <p>Singing in the shower.</p>
+    <p><?php echo $profile->description; ?></p>
 
   </div>
   <div class="w3-third w3-container">
@@ -128,24 +135,33 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
       <!-- Update info form -->
   <!-- Update info form -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-black">Update Info</h2>
-    <hr style="width:200px" class="w3-text-black">
-    <p>
-      <form method="post" action="../scriptsPHP/updateProfileForm.php">
-      First Name:<br>
-      <input type="text" name="firstname"><br>
-      Last Name:<br>
-      <input type="text" name="lastname"><br>
-      Profession :<br>
-      <input type="text" name="profession"><br>
-      Description:<br>
-      <input type="text" name="description"><br>
-      <input type="submit" value="Update">
-      </form>
-    </p>
-    
-</div>
+  <?php
+
+    if($userID_loggedIn == $userID_profOwner){
+      echo '<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+              <h2 class="w3-text-black">Update Info</h2>
+              <hr style="width:200px" class="w3-text-black">
+              <p>
+                <form method="post" action="../scriptsPHP/updateProfileForm.php" enctype="multipart/form-data">
+                First Name:<br>
+                <input type="text" name="firstname" value="'.$profile->firstName.'"/><br>
+                Last Name:<br>
+                <input type="text" name="lastname" value="'.$profile->lastName.'"/><br>
+                Email :<br>
+                <input type="text" name="email" value="'.$profile->email.'"/><br>
+                Description:<br>
+                <textarea type="text" name="description">'.$profile->description.'</textarea><br><br>
+                Upload new Profile Picture:<br>
+                <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+                <input type="submit" value="Update">
+                </form>
+              </p>
+              
+            </div>';
+    }
+
+  ?>
+  
 
   </div>
   </div>
