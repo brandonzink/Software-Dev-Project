@@ -67,27 +67,7 @@ input[type="password"] {
     border-radius: 4px;
 }
 
-/*This potentialy allows for a fade in picture at page load if needed*/
-/*.elementToFadeInAndOut {
-    width: 100%;
-    height: 100%;
-    background-image: url(Images/spin_box_faceit.gif);
-    background-size: cover;
-    -webkit-animation: fadeinout 5s linear forwards;
-    animation: fadeinout 5s linear forwards;
-    position: absolute;
-    top:-100px;
-}
 
-@-webkit-keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  50% { opacity: 1; }
-}
-
-@keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  50% { opacity: 1; }
-}*/
 
 </style>
 </head>
