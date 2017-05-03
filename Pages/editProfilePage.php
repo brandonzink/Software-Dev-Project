@@ -38,7 +38,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -70,14 +70,27 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <hr style="width:200px" class="w3-text-black">
     <p>
       <form method="post" action="../scriptsPHP/updateProfileForm.php">
-      First Name:<br>
+      First Namesssssssssssss:<br>
         <input type="text" name="firstname"><br>
       Last Name:<br>
         <input type="text" name="lastname"><br>
       Profession :<br>
-        <input type="text" name="profession" style="width:400px;"><br>
+        <select name="profession">
+          <option> - </option>
+          <option>Accountant</option>
+          <option>Bus Driver</option>
+          <option>Engineer</option>
+          <option>Brandons Servant</option>
+          <option>Mechanic</option>
+          <option>Doctor</option>
+          <option>Professor</option>
+          <option>Daycare</option>
+          <option>Age of Empires Gamer</option>
+          <option>Writer</option>
+        </select><br>
+        <!-- <input type="text" name="profession" style="width:400px;"><br> -->
       Description/About:<br>
-        <textarea onkeyup="textCounter(this, 'counter', 1000);" name="description" style="width:400px;height:200px;"></textarea><br>
+        <textarea spellcheck="true" onkeyup="textCounter(this, 'counter', 1000);" name="description" style="width:400px;height:200px;"></textarea><br>
         <h10>1,000 character max</h10><br>
         
         <br><input type="submit" class="button">
@@ -89,7 +102,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </body>
 </html>
 
-<!-- counts the number of characters on input box, deletes extra is you go over -->
+<!-- counts the number of characters on input box, deletes extra if you go over -->
 <script>
   function textCounter(field,field2,maxlimit){
    var countfield = document.getElementById(field2);

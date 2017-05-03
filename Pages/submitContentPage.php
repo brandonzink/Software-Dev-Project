@@ -7,6 +7,8 @@ if(!isset($_COOKIE["userID"])){
 <!DOCTYPE html>
 <html>
 <title>Submit Content</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -29,7 +31,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="homePage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -40,6 +42,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <a href="submitContentPage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-globe w3-xxlarge"></i>
     <p>SUBMIT CONTENT</p>
+  </a>
+  <a href="settingsPage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-bars w3-xxlarge"></i>
+    <p>SETTINGS</p>
   </a>
   <a href="../scriptsPHP/logoutForm.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-sign-in w3-xxlarge"></i>
@@ -67,14 +73,47 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       
       -->
       <!-- Create fields for a submission -->
-      <p2>New Post:</p2><br>
-      <input style="width:400px" type="text" placeholder="Title" name="title"><br>
-      
-      <p2>Content:</p2><br>
-      <textarea name="content" placeholder="Post Content" rows="10" cols="75"></textarea>
+      <form method="post" id="submitPost" name="createAccount" action="../scriptsPHP/submitPostForm.php">
+        <p2>New Post:</p2><br>
+        <input spellcheck="true" style="width:400px" type="text" placeholder="Title" name="title" id="title"><br>
+        
+        <p2>Content:</p2><br>
+        <textarea spellcheck="true" name="content" id="content" placeholder="Post Content" rows="10" cols="75"></textarea>
+        <br>
+        <input type="submit" onclick="return validateForm()"></input>
+      </form>
     </p>
-    
+   
+  </div>
+
+  <div style="position: fixed; top: 93%; left: 92%;">
+      <p>FaceIt © 2017</p>
+  </div>
+
 </div>
+
+<script type="text/javascript">
+
+
+  function validateForm()
+  {
+      var a=$("#title").val();
+      var b=$("#content").val();
+      if((a==null || a=="") || (b==null || b==""))
+      {
+        alert("Please fill all required fields");
+        return false;
+      }
+  }
+  
+  // $(document).ready(function(){
+
+
+
+  // });
+
+
+</script>
 
 </body>
 </html>

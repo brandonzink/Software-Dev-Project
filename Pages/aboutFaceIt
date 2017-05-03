@@ -1,0 +1,14 @@
+<?php
+
+include_once("../Pages/index.php");
+
+?>
+
+<!DOCTYPE html>
+<html>
+
+<title>About FaceIt</title>
+
+FaceIt is a free to use social networking site where you can connect with like minded people. 
+
+</html
