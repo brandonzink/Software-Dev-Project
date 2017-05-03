@@ -8,6 +8,9 @@ include_once("../scriptsPHP/databasehelper.php");
   $posts = retrievePosts($mysqli);
   $mysqli->close();
 
+  // date_default_timezone_set('America/Denver');
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -100,7 +103,7 @@ include_once("../scriptsPHP/databasehelper.php");
 
           var name = p['posterProfile']['firstName'] + ' ' +p['posterProfile']['lastName'];
 
-          var stamp = Date.parse(p['timestamp']).getTime()/1000; // dont need to convert because both times being compared are in UTC
+          var stamp = (Date.parse(p['timestamp']).getTime()/1000) - 21600; // dont need to convert because both times being compared are in UTC
           console.log(stamp + " - " +  <?php echo time(); ?>)
 
           var name = "<a href='../Pages/profilePage.php?id=" +  p['posterProfile']['posterID'] + "' class='nameLink'>" + name + "</a>"
