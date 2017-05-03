@@ -103,10 +103,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-globe w3-xxlarge"></i>
     <p>SUBMIT CONTENT</p>
   </a>
-<!--   <a href="settingsPage.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-bars w3-xxlarge"></i>
-    <p>SETTINGS</p>
-  </a> -->
+
   <a href="../scriptsPHP/logoutForm.php" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-sign-in w3-xxlarge"></i>
     <p>LOGOUT</p>
@@ -129,13 +126,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <li>Username</li>
       <hr style="width:200px" class="w3-text-black">
       <li>Contact</li>
-        <!-- Rounded switch/slider for public or private info
-        <label class="switch">
-          <input type="checkbox">
-          <div class="slider round"></div>
-        </label>
-        -->
-    </ul>
+        
     
 </div>
 
