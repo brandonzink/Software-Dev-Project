@@ -84,7 +84,7 @@ include_once("../scriptsPHP/databasehelper.php");
     initializePostsBoard(posts)
   });
 
-
+// For the submit content
   function initializePostsBoard(posts){
 
       if(posts.length == 0){
