@@ -4,7 +4,7 @@ Team Members:
 Brandon Zink; brandonzink  
 Cameron Connor; Cammyc  
 Abiel Fattore; abfa4082  
-Phillip Kickbush; Philopalope  
+Phillip;
 Channing Hurley; channinghurley  
   
 Title:  
